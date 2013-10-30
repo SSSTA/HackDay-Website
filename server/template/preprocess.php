@@ -1,8 +1,8 @@
 	<?php
 
 // 导入需要用的函数
-include_once("config.php");
-include_once("input_check.php");
+include_once("/serverconfig.php");
+include_once("/serverinput_check.php");
 // 从 POST 到 自定义数组的预读取 以及合法性检查
 $args = array();
 foreach ($_POST as $tag => $val) {
@@ -18,8 +18,8 @@ foreach ($_POST as $tag => $val) {
 }
 
 // 加载HTML文件的头部
-require_once("./template/common_header.html");
-require_once("./template/confirm_head.html");
+require_once("./server/template/common_header.html");
+require_once("./server/template/confirm_head.html");
 
 // 输出预览信息
 // 不把这层div留在模板里是为了把他们放在这里给人看的
@@ -42,6 +42,6 @@ print "<input type=button value=返回修改 onclick=\"window.history.go(-1)\">"
 print "</div>\n</section>\n";
 
 // 加载HTML文件的尾部
-require_once("./template/confirm_tail.html");
-require_once("./template/common_footer.html");
+require_once("./server/template/confirm_tail.html");
+require_once("./server/template/common_footer.html");
 ?>

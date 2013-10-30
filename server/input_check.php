@@ -33,7 +33,6 @@ include_once("config.php");
 	function commitSuccess()
 	{
 		global $MAIN_PAGE_PATH;
-		require_once("./template/common_header.html");
 		print "<div class=\"content-wrap\">
 				<div class=\"inner_copyright\">Collect from<a href=\"http:\/\/www.cssmoban.com/\" target=\"_blank\" title=\"ģ��֮��\">ģ��֮��</a>
 				</div> <section id=\"about-us\" class=\"clearfix\">
@@ -41,6 +40,5 @@ include_once("config.php");
 			   <h2>您已成功报名本次活动</h2>
 			   <input type=button value=后退 onclick=\"window.location.href='$MAIN_PAGE_PATH'\">
 			   </section></div>";
-		require_once("./template/common_footer.html");
 	}
 ?>

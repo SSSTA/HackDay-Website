@@ -1,12 +1,27 @@
 HackDay-Website
 ===============
 Web Pages for hackday
+
+
 # 文件结构 #
+
+## ./ ##
+
++ index.php
+
+	用于重定向至各个功能模块
+
++ preprocess.php
+
+	预处理、注册前信息确认。未来版本中将被移至他处。
 
 ## ./server/ ##
 服务端主目录，极渣
 
-+ ommit_application.php
++ checkout.php
+	用于展示已报名hacker (注:未调整格式)
+
++ commit_application.php
 
 	向数据库提交表单	
 
@@ -22,10 +37,6 @@ Web Pages for hackday
 
 	没有实现的用户输入合法性检查
 
-+ preprocess.php
-
-	预处理、注册前信息确认
-
 ### ./server/template/ ###
 
-	*.html HTML文件的头部和尾部，为了不引入现有template框架，这种填充方案是手动的
+	*.html HTML文件的头部和尾部
