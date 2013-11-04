@@ -2,7 +2,7 @@
 
 // 导入需要用的函数
 include_once("./server/config.php");
-include_once("./server/input_check.php");
+include_once("./server/tools.php");
 // 从 POST 到 自定义数组的预读取 以及合法性检查
 $args = array();
 foreach ($_POST as $tag => $val) {
@@ -12,13 +12,15 @@ foreach ($_POST as $tag => $val) {
 	}
 	else
 	{
-		handleIllegalUsrInput("无效输入数据", "请查证".$showname[$tag]."的填写");
+		require_once("./server/template/common_header.php");
+		handleErrorRighthere("无效输入数据", "请查证".$showname[$tag]."的填写");
+		require_once("./server/template/common_footer.html");
 		die();
 	}
 }
 
 // 加载HTML文件的头部
-require_once("./server/template/common_header.html");
+require_once("./server/template/common_header.php");
 require_once("./server/template/confirm_head.html");
 
 // 输出预览信息

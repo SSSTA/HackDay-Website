@@ -1,6 +1,6 @@
 <?php
 	include_once("config.php");
-	include_once("input_check.php");
+	include_once("tools.php");
 	$sql = "SELECT name, team, subject, message FROM hacker";
 	$conn = mysql_connect($HOSTNAME, $USERNAME, $PASSWORD);
 	mysql_select_db($DBNAME);
@@ -26,12 +26,12 @@
 		die();	
 	}
 	else {
-		print "<div class=\"primary\"><h2>队伍信息</h2><p>&nbsp;</p><div class=\"person blue\" id=\"person-5\">\n";
+		print "<div class=\"primary\"><h2>队伍信息</h2>\n<div class=\"person blue\" id=\"person-5\">\n";
 		foreach ($res_arr as $value) {
-			print "<h3> >> ".$value["name"]."</h3><p>组队状况 -> ".$value["team"]."</p><p>技术方向 -> ".$value["subject"]."</p></div></div>\n";
+			print "<h3> >> ".$value["name"]."</h3>\n组队状况 -> ".$value["team"]."<p/>技术方向 -> ".$value["subject"]."</p>\n";
 			// print("<tr><td>".$value["name"]."<br/>".$value["subject"]."<br/>".$value["message"]."</td></tr>");
 		}
 	}
-	print("</table></div>");
+	print("</div></table></div>");
 	require_once("./server/template/checkout_footer.html");
 ?>

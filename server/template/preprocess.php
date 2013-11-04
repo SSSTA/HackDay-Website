@@ -18,7 +18,7 @@ foreach ($_POST as $tag => $val) {
 }
 
 // 加载HTML文件的头部
-require_once("./server/template/common_header.html");
+require_once("./server/template/common_header.php");
 require_once("./server/template/confirm_head.html");
 
 // 输出预览信息

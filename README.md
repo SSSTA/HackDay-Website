@@ -2,6 +2,10 @@ HackDay-Website
 ===============
 Web Pages for hackday
 
+CHANGE LOG
+=================
+2013.11.04
+preprocess.php 已被移至/server
 
 # 文件结构 #
 
@@ -10,10 +14,6 @@ Web Pages for hackday
 + index.php
 
 	用于重定向至各个功能模块
-
-+ preprocess.php
-
-	预处理、注册前信息确认。未来版本中将被移至他处。
 
 ## ./server/ ##
 服务端主目录，极渣
@@ -37,6 +37,11 @@ Web Pages for hackday
 
 	没有实现的用户输入合法性检查
 
++ preprocess.php
+
+	预处理、注册前信息确认
+
 ### ./server/template/ ###
 
 	*.html HTML文件的头部和尾部
+	*.php  需要动态处理路径问题的文件
