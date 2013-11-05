@@ -41,7 +41,6 @@
           <ul>
            		<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=index">首页</a></li>
             	<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=info">详细介绍</a></li>
-             	<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=show">作品展示</a></li>
             	<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=result">队伍信息</a></li>
        	        <li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=apply">报名参赛</a></li>
             </ul>
