@@ -62,6 +62,7 @@ include_once("config.php");
 	   ################################ */
 	function MsgPage($title, $content, $back_to_home = false)
 	{
+		global $MAIN_PAGE_PATH;
 		require_once("./template/common_header.php");
 		print "<div class=\"content-wrap\">\n
 				<div class=\"inner_copyright\">Collect from<a href=\"http:\/\/www.cssmoban.com/\" target=\"_blank\" title=\"ģ��֮��\">ģ��֮��</a>\n

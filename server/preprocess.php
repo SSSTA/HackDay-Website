@@ -1,8 +1,8 @@
-	<?php
+<?php
 
 // 导入需要用的函数
-include_once("./server/config.php");
-include_once("./server/tools.php");
+include_once("./config.php");
+include_once("./tools.php");
 // 从 POST 到 自定义数组的预读取 以及合法性检查
 $args = array();
 foreach ($_POST as $tag => $val) {
@@ -12,16 +12,16 @@ foreach ($_POST as $tag => $val) {
 	}
 	else
 	{
-		require_once("./server/template/common_header.php");
+		require_once("./template/common_header.php");
 		handleErrorRighthere("无效输入数据", "请查证".$showname[$tag]."的填写");
-		require_once("./server/template/common_footer.html");
+		require_once("./template/common_footer.html");
 		die();
 	}
 }
 
 // 加载HTML文件的头部
-require_once("./server/template/common_header.php");
-require_once("./server/template/confirm_head.html");
+require_once("./template/common_header.php");
+require_once("./template/confirm_head.html");
 
 // 输出预览信息
 // 不把这层div留在模板里是为了把他们放在这里给人看的
@@ -35,7 +35,7 @@ print "</div>";
 // 构造不可见的form
 // 求不吐槽, 这倒霉主意是CSDN给的
 print "<section id=\"hiddensection\" class=\"clearfix\"><div class=\"primary\">\n";
-print "<form method=\"post\" action=\"./server/commit_application.php\" id=\"hiddenform\">\n";
+print "<form method=\"post\" action=\"./commit_application.php\" id=\"hiddenform\">\n";
 foreach ($args as $key => $value) {
 	print "<input name=\"$key\" id=\"$key\" type=\"hidden\" value=\"$value\"/>\n";
 }
@@ -44,6 +44,6 @@ print "<input type=button value=返回修改 onclick=\"window.history.go(-1)\">"
 print "</div>\n</section>\n";
 
 // 加载HTML文件的尾部
-require_once("./server/template/confirm_tail.html");
-require_once("./server/template/common_footer.html");
+require_once("./template/confirm_tail.html");
+require_once("./template/common_footer.html");
 ?>
