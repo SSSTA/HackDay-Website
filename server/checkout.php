@@ -17,21 +17,20 @@
 		$print_count++;
     	$res_arr[] = $elem;
 	}
-	// 打表
 	require_once("./server/template/checkout_header.html");
-	print("<div><table>");
 	if($print_count == 0)
 	{
 		print("NOT FOUND");
 		die();	
 	}
 	else {
-		print "<div class=\"primary\"><h2>队伍信息</h2>\n<div class=\"person blue\" id=\"person-5\">\n";
+		print "<h2>队伍信息</h2>\n<div id=\"members\">\n<div id=\"person-bar\">\n";
+		$counter = 0;
 		foreach ($res_arr as $value) {
-			print "<h3> >> ".$value["name"]."</h3>\n组队状况 -> ".$value["team"]."<p/>技术方向 -> ".$value["subject"]."</p>\n";
-			// print("<tr><td>".$value["name"]."<br/>".$value["subject"]."<br/>".$value["message"]."</td></tr>");
+			print "<div class=\"person\">\n<h3>".$value["name"]."</h3>\n<p>组队状况 -> ".$value["team"]."<p/>\n<h3 class=\"role\">技术方向 -> ".$value["subject"]."</h3>\n</div>\n";
+			$counter++;
 		}
 	}
-	print("</div></table></div>");
+	print("</div>\n</div>\n");
 	require_once("./server/template/checkout_footer.html");
 ?>

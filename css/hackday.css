@@ -1,0 +1,5 @@
+#members{border-width:0 0 1px 0;border-style:dashed;border-color:#ddd;min-height:590px;}#members #type-bar{margin-top:20px;text-align:center;}#members #type-bar span{font-size:18px;margin-right:20px;}#members #type-bar span a{color:#999;text-decoration:none;}
+#members #type-bar span a:hover{color:#555;}
+#person-bar{margin-bottom:20px;overflow:hidden;}
+.person{overflow:hidden;cursor:pointer;margin-top:20px;color:black;position:relative;padding:1%;float:left;width:21%;margin-right:2%;height:150px;}.person .role{position:relative;bottom:15px;}
+.person p{color:black;}
