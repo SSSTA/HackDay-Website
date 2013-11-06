@@ -1,4 +1,4 @@
-<?php include_once("config.php"); global $SITE_ROOT, $CSS_ROOT, $JS_ROOT, $IMAGE_ROOT;?>
+<?php include_once("config.php"); global $SITE_ROOT, $CSS_ROOT, $JS_ROOT, $IMAGE_ROOT, $MAIN_PAGE_PATH;?>
 <!DOCTYPE html>
 <!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
@@ -40,10 +40,10 @@
 		<img src="<?php echo $SITE_ROOT.$IMAGE_ROOT; ?>/logo.png" width="411" height="75"/>
 		<nav>
 			<ul>
-				<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=index">首页</a></li>
-				<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=info">详细介绍</a></li>
-				<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=result">队伍信息</a></li>
-				<li><a href="<?php echo $SITE_ROOT; ?>/index.php?p=apply">报名参赛</a></li>
+				<li><a href="<?php echo $MAIN_PAGE_PATH; ?>?p=index">首页</a></li>
+				<li><a href="<?php echo $MAIN_PAGE_PATH; ?>?p=info">详细介绍</a></li>
+				<li><a href="<?php echo $MAIN_PAGE_PATH; ?>?p=result">队伍信息</a></li>
+				<li><a href="<?php echo $MAIN_PAGE_PATH; ?>?p=apply">报名参赛</a></li>
 			</ul>
 		</nav>
 	</header>
