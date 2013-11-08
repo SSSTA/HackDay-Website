@@ -37,7 +37,7 @@
 <!-- header-wrap -->
 <div id="header-wrap">
 	<header>
-		<img src="<?php echo $SITE_ROOT.$IMAGE_ROOT; ?>/logo.png" width="411" height="75"/>
+		<img src="<?php echo $SITE_ROOT.$IMAGE_ROOT; ?>/logo.png"/>
 		<nav>
 			<ul>
 				<li><a href="<?php echo $MAIN_PAGE_PATH; ?>?p=index">首页</a></li>

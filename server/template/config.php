@@ -15,7 +15,7 @@
  				  	  'subject'=> "方向",
  				  	  'message'=> "个人简历");
 	// 不建议写上http：// 文本代换之后可能会出事
-	$MAIN_PAGE_PATH = "http://127.0.0.1/www/HackDay/index.html";
+	$MAIN_PAGE_PATH = "http://127.0.0.1/www/HackDay/index.php";
 	$SITE_ROOT = 'http://127.0.0.1/www/HackDay';
 	$CSS_ROOT = '/css';
 	$JS_ROOT  = '/js';

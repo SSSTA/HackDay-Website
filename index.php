@@ -1,4 +1,5 @@
 <?php
+include_once("./server/config.php");
 $redirection = array('index'  => './server/template/index.html',
 					 'info'   => './server/template/info.html',
 					 'show'   => './server/template/show.html',
