@@ -4,6 +4,7 @@
 include_once("./config.php");
 include_once("./tools.php");
 // 从 POST 到 自定义数组的预读取 以及合法性检查
+global $SITE_ROOT, $IMAGE_ROOT;
 $args = array();
 foreach ($_POST as $tag => $val) {
 	if(isSQLSafe($val) && isValidInfo($tag, $val))
@@ -25,7 +26,7 @@ require_once("./template/confirm_head.html");
 
 // 输出预览信息
 // 不把这层div留在模板里是为了把他们放在这里给人看的
-print "<div class=\"person blue\" id=\"person-5\">";
+print "<div>";
 foreach ($args as $key => $value) {
 	print "<h3>".$showname[$key]."</h3>";
 	print "<p>&emsp;".$value."</p>";

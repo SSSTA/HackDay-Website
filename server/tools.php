@@ -10,7 +10,8 @@ include_once("config.php");
 	// 眼下不着急实现 + 1
 	function isValidInfo($type_name, $str)
 	{
-		if(strlen($str) > 0)
+		global $STRLEN_LIMIT;
+		if((strlen($str) > 0) && (strlen($str) <= $STRLEN_LIMIT[$type_name]))
 		{
 			return true;
 		} else {

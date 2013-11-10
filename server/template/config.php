@@ -14,6 +14,12 @@
  				  	  'team'   => "组队状况",
  				  	  'subject'=> "方向",
  				  	  'message'=> "个人简历");
+	$STRLEN_LIMIT = array('name'   => 30,
+ 				  		  'email'  => 60,
+ 				  		  'phone'  => 30,
+ 				  	   	  'team'   => 25,
+ 				  	      'subject'=> 120,
+ 				  	      'message'=> 4000);
 	// 不建议写上http：// 文本代换之后可能会出事
 	$MAIN_PAGE_PATH = "http://127.0.0.1/www/HackDay/index.php";
 	$SITE_ROOT = 'http://127.0.0.1/www/HackDay';
