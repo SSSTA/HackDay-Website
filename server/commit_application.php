@@ -1,6 +1,7 @@
 <?php
 include_once("config.php");
 include_once("tools.php");
+global $STR_FILTER;
 $args = array();
 // 从 POST 到 自定义数组的预读取 以及合法性检查
 foreach ($_POST as $tag => $val) {
@@ -33,6 +34,15 @@ foreach ($check_target as $key) {
 		MsgPage("囧rz", "我们发现".$value."这个".$showname[$key]."和已有记录重复了～<p/>
 			如果希望修改已有记录，请联系$ADMIN_EMAIL.");
 		$free2go = false;
+		die();
+	}
+}
+// 内容过滤
+foreach ($args as $key => $value) {
+	$filter_back = filter_var($value, $STR_FILTER[$key]);
+	if($filter_back == false)
+	{
+		MsgPage("无效的输入数据", "请查证".$showname[$tag]."的填写");
 		die();
 	}
 }
