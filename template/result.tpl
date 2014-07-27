@@ -11,10 +11,10 @@
         <div id="person-bar">
             {% for hacker in hackers %}
 			<div class="person">
-                <h3>{% hacker.name %}$value["name"]</h3>
-                <p>Email -> hacker.email <p/>
-                <p>组队状况 -> hacker.team<p/>
-                <h3 class="role">技术方向 -> hacker.subject</h3>
+                <h3>{{ hacker["name"] }}</h3>
+                <p>Email -> {{ hacker["email"] }}<p/>
+                <p>组队状况 -> {{ hacker["team"] }}<p/>
+                <h3 class="role">技术方向 -> {{ hacker["subject"] }}</h3>
             </div>
             {% endfor %}
         </div>

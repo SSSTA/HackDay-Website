@@ -10,19 +10,18 @@
             <h2>队伍信息</h2>
 {# 输出预览信息 #}
             <div class="person blue" id="person-5">
-                {% for key in info|keys %}
-                <h3>".$showname[$key]."</h3>
-                <p>&emsp;".$value."</p>
+                {% for key, value in info.items() %}
+                <h3>{{ showname[$key] }}</h3>
+                <p>&emsp;{{ value }}</p>
                 {% endfor %}
             </div>
-
 {% 构造不可见的form #}
 {% 求不吐槽, 这倒霉主意是CSDN给的 #}
             <section id="hiddensection" class="clearfix">
                 <div class="primary">
                     <form method="post" action="commit_application.php" id="hiddenform">
-                    {% for key in info|keys %}
-    	            <input name="$key" id="$key" type="hidden" value="$value"/>
+                    {% for key, value in info.items() %}
+    	            <input name="{{ key }}" id="{{ key }}" type="hidden" value="{{ value }}"/>
                     {% endfor %}
                     <input type="submit" value="确认提交" class="button"></form>\n";
                     <input type=button value=返回修改 onclick="window.history.go(-1)">";
