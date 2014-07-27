@@ -1,4 +1,4 @@
-{% extendstends "base.tpl" %}
+{% extends "base.tpl" %}
 {% block title %}
 <title>405 - SSSTA Hackday</title>
 {% endblock %}
