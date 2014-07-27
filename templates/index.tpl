@@ -1,4 +1,4 @@
-{% extendstends "base.tpl" %}
+{% extends "base.tpl" %}
 {% block content %}
 <div class="content-wrap">
   <section id="main">
