@@ -20,8 +20,7 @@ See: http://twig.sensiolabs.org
     <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" />
     <link rel="stylesheet" href="css/hackday.css">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.6.1.min.js"><\/script>')</script>
+    <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/humane.js"></script>
     <script src="js/hackday.js"></script>
