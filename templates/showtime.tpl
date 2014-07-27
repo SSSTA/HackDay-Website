@@ -1,4 +1,4 @@
-{% extendstends "base.tpl" %}
+{% extends "base.tpl" %}
 
 {% block title %}
 {% if productions %}
@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="content-wrap">
-    {% if productions %}
+    {% if count>0 %}
     <section id="portfolio">
         <h1>作品展示</h1>
         <ul class="folio-list clearfix">
@@ -19,7 +19,7 @@
                 <div class="thumb"></div>
                 <h3 class="entry-title">{{ production.name }}</h3>
             </li>
-        {% endblock %}
+        {% endfor %}
         </ul>
         <a class="back-to-top" href="#main">Back to Top</a>
     </section>
@@ -30,4 +30,4 @@
     </section>
     {% endif %}
 </div>
-{% entry %}
+{% endblock %}
