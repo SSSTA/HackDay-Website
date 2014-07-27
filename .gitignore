@@ -1,6 +1,9 @@
 .DS_Store
 *.sw[po]
 
+.idea/
+html/
+
 config.php
 *~
 
