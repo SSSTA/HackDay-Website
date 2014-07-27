@@ -6,11 +6,13 @@ app = Flask(__name__)
 mongo = MongoClient()
 hackday_db = mongo.hackday
 
+
 @app.route('/hackers.html')
 def show_hackers():
     hackers = hackday_db.hacker.find()
     count = hackers.count()
     return render_template('hackers.tpl', hackers=hackers, count=count)
+
 
 @app.route('/showtime.html')
 def showtime():
@@ -18,17 +20,20 @@ def showtime():
     count = productions.count()
     return render_template('showtime.tpl', productions=productions, count=count)
 
-@app.route('/apply.html', methods=["POST"])
+
+@app.route('/commit.post', methods=["POST"])
 def handle_apply():
     pass
 
 
-@app.route('/confirm.html')
+@app.route('/confirm.html', methods=["GET", "POST"])
 def handle_confirm():
     pass
 
+
 def main():
     app.run(debug=True)
+
 
 if __name__ == '__main__':
     main()
