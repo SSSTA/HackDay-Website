@@ -2,7 +2,7 @@
 {% block title %}
 <title>确认信息 - SSSTA Hackday</title>
 {% endblock %}
-{% block contact %}
+{% block content %}
 <div class="content-wrap">
     <section id="about-us" class="clearfix">
         <h1>确认信息</h1>
@@ -11,20 +11,17 @@
 {# 输出预览信息 #}
             <div class="person blue" id="person-5">
                 {% for key, value in info.items() %}
-                <h3>{{ showname[$key] }}</h3>
-                <p>&emsp;{{ value }}</p>
+                <h3>{{ key_name[key] }}</h3>
+                <p>{{ value }}</p>
                 {% endfor %}
             </div>
-{% 构造不可见的form #}
-{% 求不吐槽, 这倒霉主意是CSDN给的 #}
-            <section id="hiddensection" class="clearfix">
+{# 提交与返回按钮 #}
+            <section id="submit" class="clearfix">
                 <div class="primary">
-                    <form method="post" action="commit_application.php" id="hiddenform">
-                    {% for key, value in info.items() %}
-    	            <input name="{{ key }}" id="{{ key }}" type="hidden" value="{{ value }}"/>
-                    {% endfor %}
-                    <input type="submit" value="确认提交" class="button"></form>\n";
-                    <input type=button value=返回修改 onclick="window.history.go(-1)">";
+                    <form method="post" action="" id="hiddenform">
+                        <input type=button value="确认提交" class="button" onclick="location.href='register.get';">
+                        <input type=button value="返回修改" class="button" onclick="history.back();">
+                    </form>
                 </div>
             </section>
         </div>

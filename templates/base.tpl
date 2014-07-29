@@ -41,8 +41,10 @@ See: http://twig.sensiolabs.org
             <ul>
                 <li><a href="index.html">首页</a></li>
                 <li><a href="info.html">详细介绍</a></li>
-                <li><a href="result.html">队伍信息</a></li>
+                <li><a href="hackers.html">队伍信息</a></li>
+                <li><a href="showtime.html">作品展示</a></li>
                 <li><a href="apply.html">报名参赛</a></li>
+                <!-- <li><a href="update.html">作品提交</a></li> -->
             </ul>
         </nav>
     </header>
@@ -58,8 +60,10 @@ See: http://twig.sensiolabs.org
         <ul class="footer-menu">
             <li><a href="index.html">首页</a></li>
             <li><a href="info.html">详细介绍</a></li>
-            <li><a href="result.html">队伍信息</a></li>
+            <li><a href="hackers.html">队伍信息</a></li>
+            <li><a href="showtime.html">作品展示</a></li>
             <li><a href="apply.html">报名参赛</a></li>
+            <!-- <li><a href="update.html">作品提交</a></li> -->
         </ul>
         <p class="footer-text">Copyleft 2014. Be free to fork.</p>
     </div>

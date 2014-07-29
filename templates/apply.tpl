@@ -1,6 +1,6 @@
 {% extends "base.tpl" %}
 {% block title %}
-<title>SSSTA Hackday - 报名参赛</title>
+<title>报名参赛 SSSTA Hackday</title>
 {% endblock %}
 {% block content %}
 <div class="content-wrap">
@@ -8,7 +8,7 @@
         <h1>报名参赛</h1>
         <div class="primary">
             <p class="intro">请务必保证Email和电话号码真实有效</p>
-            <form method="post" action="./server/preprocess.php" id="applyform">
+            <form method="post" action="commit.post" id="applyform">
                 <div>
                     <p>信息收集表</p>
                 </div>
@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     <label>电话<span class="required">*</span></label>
-                    <input name="phone" type="text" id="phone" value="" />
+                    <input name="phone" type="text" pattern="\d{11}" id="phone" value="" />
                 </div>
                 <div>
                     <label>是否完成组队<span class="required">*</span></label>
@@ -32,12 +32,17 @@
                     </select>
                 </div>
                 <div>
-                <label>方向</label>
-                <input name="subject" type="text" id="subject"  value="" />
+                    <label>方向</label>
+                    <select name="direction" type="text" id="direction">
+                        <option value="Web">Web</option>
+                        <option value="Android">Android</option>
+                        <option value="iOS">iOS</option>
+                        <option value="other">其他</option>
+                    </select>
                 </div>
                 <div>
-                <label>个人简历</label>
-                <textarea name="message" rows="20" cols="50"  id="message" ></textarea><br /><br />
+                    <label>个人简历</label>
+                    <textarea name="description" rows="20" cols="50"  id="message" ></textarea><br /><br />
                 </div>
                 <div>
    			        <input type="submit" value="提交" class="button">
